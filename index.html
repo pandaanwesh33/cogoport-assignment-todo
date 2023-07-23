@@ -12,7 +12,7 @@
 
     <!-- Add Todo Section -->
     <div class="add-todo">
-      <input type="text" id="todoText" placeholder="Enter your todo">
+      <input type="text" id="todoText" placeholder="Enter task">
       <!-- due date -->
       <label for="dueDate">Due Date : </label>
       <input type="date" id="dueDate" name="dueDate">
@@ -27,59 +27,57 @@
       <input type="text" id="category" placeholder="Category">
       <!-- tags -->
       <input type="text" id="tags" placeholder="Tags (comma-separated)">
-      <button id="addTodoButton">Add Todo</button>
+      <button id="addTodoButton">Add Task</button>
     </div>
-
-    
 
     <!-- Filters Section -->
     <div class="filters">
-        <h2>Filters</h2>
-        <label for="startDateFilter">Start Date:</label>
-        <input type="date" id="startDateFilter">
-        <label for="endDateFilter">End Date:</label>
-        <input type="date" id="endDateFilter">
-        <label for="categoryFilter">Category:</label>
-        <input type="text" id="categoryFilter">
-        <label for="priorityFilter">Priority:</label>
-        <select id="priorityFilter">
-          <option value="">All</option>
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
+      <h2>Filters</h2>
+      <label for="startDateFilter">Start Date:</label>
+      <input type="date" id="startDateFilter">
+      <label for="endDateFilter">End Date:</label>
+      <input type="date" id="endDateFilter">
+      <label for="categoryFilter">Category:</label>
+      <input type="text" id="categoryFilter">
+      <label for="priorityFilter">Priority:</label>
+      <select id="priorityFilter">
+        <option value="">All</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button id="filterButton">Filter</button>
+        
+      <!-- Sort -->
+      <div class="buttons-contanier">
+        <!-- Search Section -->
+        <div class="search-section">
+            <h2>Search</h2>
+            <input type="text" id="searchQuery" placeholder="Enter search query">
+            <button onclick="performSearch()">Search</button>
+        </div>
+        <label for="sortBy">Sort By:</label>
+        <select id="sortBy">
+        <option value="dueDate">Due Date</option>
+        <option value="priority">Priority</option>
         </select>
-        <button id="filterButton">Filter</button>
-      
-        <!-- <h2>Sort</h2> -->
-        <div class="buttons-contanier">
-            <!-- Search Section -->
-            <div class="search-section">
-                <h2>Search</h2>
-                <input type="text" id="searchQuery" placeholder="Enter search query">
-                <button onclick="performSearch()">Search</button>
-            </div>
-            <label for="sortBy">Sort By:</label>
-            <select id="sortBy">
-            <option value="dueDate">Due Date</option>
-            <option value="priority">Priority</option>
-            </select>
-            <button id="sortButton">Sort</button>
+        <button id="sortButton">Sort</button>
+        <!-- View Backlogs Button -->
+        <button id="viewBacklogsButton">View Backlogs</button> 
+      </div>
 
-            <!-- View Backlogs Button -->
-            <button id="viewBacklogsButton">View Backlogs</button>
-        </div>
-        <!-- Activity Logs Section -->
-        <div class="activity-logs">
-            <h2>Activity Logs</h2>
-            <button onclick="toggleActivityLogs()">View Activity Logs</button>
-            <div id="activityLogs" style="display: none;"></div>
-        </div>
+      <!-- Activity Logs Section -->
+      <div class="activity-logs">
+          <h2>Activity Logs</h2>
+          <button onclick="toggleActivityLogs()">View Activity Logs</button>
+          <div id="activityLogs" style="display: none;"></div>
+      </div>
     </div>
-    
+      
     <!-- Todo List Section -->
     <div class="todo-list" id="todoList">
-        <!-- Todo items will be dynamically added here -->
-      </div>
+        <!-- tasks will be added here -->
+    </div>
   </div>
   <script src="script.js"></script> 
 </body>

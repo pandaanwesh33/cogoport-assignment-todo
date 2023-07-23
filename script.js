@@ -169,26 +169,41 @@ function displayTodos() {
     //Adding elements to todoItem div
 
     //task name
+    var textLabel = document.createElement('label');
+    textLabel.innerHTML = '===Task Description:=== ';
     const todoTextElement = document.createElement('span');
     todoTextElement.textContent = todo.todoText;
     //category
+    var categoryLabel = document.createElement('label');
+    categoryLabel.innerHTML = '====Category:====';
     const category = document.createElement('span')
     category.textContent = todo.category;
     //due date
+    var dueDateLabel = document.createElement('label');
+    dueDateLabel.innerHTML = '====Due Date :====';
     let dueDate = document.createElement("INPUT");
     dueDate.setAttribute("type", "text");
     dueDate.value = new Date(todo.dueDate);
     //priority
+    var priorityLabel = document.createElement('label');
+    priorityLabel.innerHTML = '====Priority :====';
     let priority = document.createElement("INPUT");
     priority.setAttribute("type", "text");
     priority.value = todo.priority;
 
+    todoItem.appendChild(textLabel);
     todoItem.appendChild(todoTextElement);
+    todoItem.appendChild(categoryLabel);
     todoItem.appendChild(category);
+    todoItem.appendChild(dueDateLabel);
     todoItem.appendChild(dueDate);
+    todoItem.appendChild(priorityLabel);
     todoItem.appendChild(priority);
 
     //tags
+    var tagLabel = document.createElement('label');
+    tagLabel.innerHTML = '====Tags :====';
+    todoItem.appendChild(tagLabel);
     for(var i=0; i<(todo.tags).length;i++){
       // console.log(todo.tag)
       const tagBox = document.createElement("input");

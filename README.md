@@ -1,7 +1,7 @@
 # cogoport-assignment-todo
 **NOTE**: 
 <ol>
-  <li>I missed the submission of todo schema point, but have added it after 11 PM 23July </li>
+  <li>I missed the submission of todo schema, but have added it after 11 PM 23July </li>
   <li>Search results are printed in console. Currently it has no UI feature</li>
 </ol>
 
